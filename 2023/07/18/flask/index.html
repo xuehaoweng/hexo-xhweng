@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Flask | 有追求的开发者</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="MinHow,MinHow's Blog" />
+  
+  <meta name="description" content="Flask">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flask">
+<meta property="og:url" content="http://xhweng.cn/2023/07/18/flask/index.html">
+<meta property="og:site_name" content="有追求的开发者">
+<meta property="og:description" content="Flask">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-07-18T12:19:00.000Z">
+<meta property="article:modified_time" content="2023-07-19T12:06:13.127Z">
+<meta property="article:author" content="xuehaoweng">
+<meta property="article:tag" content="python web">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+  
+
+  
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">有追求的开发者</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于我</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        有追求的开发者
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注全栈开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Github" target="_blank" href="//github.com/xuehaoweng">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="WeChat" target="_blank" href="//cdn.staticaly.com/gh/xuehaoweng/netaxe-image@master/wechat.41qkm4xwjgs0.webp">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-flask" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Flask
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2023-07-18
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <blockquote>
+<p>Flask是一个轻量级的可定制框架，使用Python语言编写，较其他同类型框架更为灵活、轻便、安全且容易上手。它可以很好地结合MVC模式进行开发，开发人员分工合作，小型团队在短时间内就可以完成功能丰富的中小型网站或Web服务的实现。</p>
+</blockquote>
+<p>Flask 依赖 Jinja 模板引擎和 Werkzeug WSGI(在Web应用和多种服务器之间的Python标准接口) 套件。</p>
+<p><a target="_blank" rel="noopener" href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja documentation</a></p>
+<p><a target="_blank" rel="noopener" href="https://werkzeug.palletsprojects.com/">Werkzeug documentation</a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>“微”并不代表整个应用只能塞在一个 Python 文件内， 当然塞在单一文件内也没有问题。”微”也不代表 Flask 功能不强。 微框架中的”微”字表示 Flask 的目标是保持核心简单而又可扩展。 Flask 不会替你做出许多决定，比如选用何种数据库。 类似的决定，如使用何种模板引擎，是非常容易改变的。 Flask 可以变成你任何想要的东西，一切恰到好处，由你做主。</p>
+<p>默认情况下，flask不包括数据库抽象层、表单验证或其他任何可以处理该问题的库。相反，flask支持扩展来向应用程序添加这样的功能，就好像它是在flask本身中实现的一样。许多扩展提供了数据库集成、表单验证、上载处理、各种开放式身份验证技术等等。Flask可能是”微型的”，但它已经为满足您的各种生产需要做出了充足的准备。</p>
+<h2 id="配置和惯例"><a href="#配置和惯例" class="headerlink" title="配置和惯例"></a>配置和惯例</h2><p>刚起步的时候 Flask 有许多带有合理默认值的配置值和惯例。按照惯例， 模板和静态文件存放在应用的 Python 源代码树的子目录中，名称分别为 templates 和 static 。惯例是可以改变的，但是你大可不必改变， 尤其是刚起步的时候。</p>
+<p>Flask中的一个设计原则之一是简单地任务不应当使用很多的代码，应当可以简单地完成，但同时也不应当把程序员限制得太死。因此，Flask有一些设计思路，有些人可能会觉得惊讶或不正统。例如，flask在内部使用线程本地对象，这样就不必在同一个请求中因为线程安全的原因，而函数之间传递对象。这种方法很方便，但是当用于依赖注入或者当尝试重新使用了与请求挂钩的值的代码时，则需要一个合法的环境。flask项目对本地线程是直言不讳的，没有一点隐藏的意思，并且在使用本地线程时在代码中进行了标识和说明。</p>
+<h2 id="做网络开发时要谨慎。"><a href="#做网络开发时要谨慎。" class="headerlink" title="做网络开发时要谨慎。"></a>做网络开发时要谨慎。</h2><p>构建Web应用程序时，请始终牢记安全性。</p>
+<p>如果你开发了一个网络应用，那么可能会让用户注册并把他们的数据保存在服务器上。 用户把数据托付给了你。哪怕你的应用只是给自己用的，你也会希望数据完好无损。</p>
+<p>不幸的是，有很多的方法可以攻击网络应用的安全性。Flask 可以防御 现代 Web 应用最常见的安全攻击：跨站代码攻击（ XSS ）。Flask 和 下层的 Jinja2 模板引擎会保护你免受这种攻击，除非故意把不安全的HTML代码放进来。但是攻击的方法依然还有很多。</p>
+<p>文档将警告您有关需要注意安全性的Web开发方面。其中一些安全问题比人们想象的要复杂得多，我们有时都低估了漏洞被利用的可能性——直到一个聪明的人利用这个弱点来攻击我们的程序。不要认为你的应用程序不够重要，不足以吸引攻击者。根据攻击类型的不同，自动僵尸程序可能正在探索如何用垃圾邮件、恶意软件链接等填充你的数据库。</p>
+<p>Flask与任何其他框架都没有区别，因为开发人员必须谨慎地构建，在构建到您的需求时要注意漏洞利用。</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2023年07月19日 20:06</p>
+        <p>原始链接： <a class="post-url" href="/2023/07/18/flask/" title="Flask">http://xhweng.cn/2023/07/18/flask/</a></p>
+        <footer>
+            <a href="http://xhweng.cn">
+                <img src="/images/logo.png" alt="xuehaoweng">
+                xuehaoweng
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://xhweng.cn/2023/07/18/flask/&title=《Flask》 — 有追求的开发者&pic=https://cdn.staticaly.com/gh/xuehaoweng/netaxe-image@master/u=558121380,3127301551&fm=253&fmt=auto&app=138&f=PNG.5ctxbwzog0g0.webp" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://xhweng.cn/2023/07/18/flask/&title=《Flask》 — 有追求的开发者&source=用代码书写人生，让每个瞬间都充满激情和活力" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://xhweng.cn/2023/07/18/flask/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Flask》 — 有追求的开发者&url=http://xhweng.cn/2023/07/18/flask/&via=http://xhweng.cn" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://xhweng.cn/2023/07/18/flask/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://xhweng.cn/2023/07/18/flask/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/pythonweb/" class="color1">python web</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%89%8D%E8%A8%80"><span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E5%92%8C%E6%83%AF%E4%BE%8B"><span class="post-toc-text">配置和惯例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%81%9A%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91%E6%97%B6%E8%A6%81%E8%B0%A8%E6%85%8E%E3%80%82"><span class="post-toc-text">做网络开发时要谨慎。</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2023/07/18/django/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          django
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2023/07/18/tools/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">工具集合</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2023 xuehaoweng<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://xhweng.cn",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/python-web/" style="font-size: 20px;">python web</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/" style="font-size: 10px;">工具集合</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于我</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/python-web/" style="font-size: 20px;">python web</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/" style="font-size: 10px;">工具集合</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  
+<script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  
+<script src="/js/animate.js"></script>
+
+
+
+  
+<script src="/js/pop-img.js"></script>
+
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
